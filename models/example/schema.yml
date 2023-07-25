@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: shiphero_va
+    tables:
+      - name: orderitems
+      - name: orderitems_dbt
+      - name: orderitems_prod
+      - name: orders
+      - name: orders_dbt
+      - name: orders_prod
+      - name: products
+      - name: products_dbt
+      - name: products_prod
+      - name: shipments
+      - name: shipments_dbt
+      - name: shipments_prod

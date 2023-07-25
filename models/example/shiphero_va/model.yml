@@ -1,0 +1,176 @@
+version: 2
+
+
+models:
+  - name: orderitems_dbt
+    description: "Update orderitems_dbt table with the latest records from orderitems"
+    config:
+      materialized: table
+    columns:
+      - name: SKU
+        description: "SKU"
+        tests:
+          - not_null
+      - name: ORDER_DATE
+        description: "Order date"
+        tests:
+          - not_null
+      - name: ORDER_NUMBER
+        description: "Order number"
+        tests:
+          - not_null
+      - name: LINE_ITEM_STATUS
+        description: "Line item status"
+        tests:
+          - not_null
+      - name: NAME 
+        description: "Name"
+        tests:
+          - not_null
+
+  - name: orderitems_prod
+    description: "Update orderitems_prod table with the latest records from orderitems"
+    config:
+      materialized: table
+    columns:
+      - name: SKU
+        description: "SKU"
+        tests:
+          - not_null
+      - name: ORDER_DATE
+        description: "Order date"
+        tests:
+          - not_null
+      - name: ORDER_NUMBER
+        description: "Order number"
+        tests:
+          - not_null
+      - name: LINE_ITEM_STATUS
+        description: "Line item status"
+        tests:
+          - not_null
+      - name: NAME 
+        description: "Name"
+        tests:
+          - not_null
+
+      
+  - name: orders_dbt
+    description: "Update orders_dbt table with the latest records from orders"
+    config:
+      materialized: table
+    columns:
+      - name: ORDER_NUMBER
+        description: "Order number"
+        tests:
+          - not_null
+      - name: ORDER_DATE
+        description: "Order date"
+        tests:
+          - not_null
+      - name: _3_PL_CUSTOMER
+        description: "Label name"
+        tests:
+          - not_null
+
+
+  - name: orders_prod
+    description: "Update orders_prod table with the latest records from orders"
+    config:
+      materialized: table
+    columns:
+      - name: ORDER_NUMBER
+        description: "Order number"
+        tests:
+          - not_null
+      - name: ORDER_DATE
+        description: "Order date"
+        tests:
+          - not_null
+      - name: _3_PL_CUSTOMER
+        description: "Label name"
+        tests:
+          - not_null
+
+  - name: products_dbt
+    description: "Update products_dbt table with the latest records from products"
+    config:
+      materialized: table
+    columns:
+      - name: SKU
+        description: "SKU id"
+        tests:
+          - not_null
+      - name: _3_PL_CUSTOMER
+        description: "Label name"
+        tests:
+          - not_null
+
+
+  - name: products_prod
+    description: "Update products_prod table with the latest records from products"
+    config:
+      materialized: table
+    columns:
+      - name: SKU
+        description: "SKU id"
+        tests:
+          - not_null
+      - name: _3_PL_CUSTOMER
+        description: "Label name"
+        tests:
+          - not_null
+
+  - name: shipments_dbt
+    description: "Update shipments_dbt table with the latest records from shipments"
+    config:
+      materialized: table
+    columns:
+      - name: SHIPPING_LABEL_ID
+        description: "SHIPPING_LABEL_ID"
+        tests:
+          - not_null
+      - name: _3_PL_CUSTOMER
+        description: "Label name"
+        tests:
+          - not_null
+      - name: ORDER_NUMBER
+        description: "ORDER_NUMBER"
+        tests:
+          - not_null
+      - name: ORDER_ID
+        description: "ORDER_ID"
+        tests:
+          - not_null
+      - name: ORDER_DATE
+        description: "ORDER_DATE"
+        tests:
+          - not_null
+
+
+  - name: shipments_prod
+    description: "Update shipments_prod table with the latest records from shipments"
+    config:
+      materialized: table
+    columns:
+      - name: SHIPPING_LABEL_ID
+        description: "SHIPPING_LABEL_ID"
+        tests:
+          - not_null
+      - name: _3_PL_CUSTOMER
+        description: "Label name"
+        tests:
+          - not_null
+      - name: ORDER_NUMBER
+        description: "ORDER_NUMBER"
+        tests:
+          - not_null
+      - name: ORDER_ID
+        description: "ORDER_ID"
+        tests:
+          - not_null
+      - name: ORDER_DATE
+        description: "ORDER_DATE"
+        tests:
+          - not_null
+  
